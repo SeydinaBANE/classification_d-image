@@ -8,10 +8,6 @@ import time
 from sklearn.model_selection import KFold, GridSearchCV, RandomizedSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 
-def print_same_line(string):
-	sys.stdout.write('\r' + string)
-	sys.stdout.flush()
-
 
 
 class CIFAR10:
@@ -105,12 +101,6 @@ print(y_train.shape)
 print(X_test.shape)
 print(y_test.shape)
 
-"""nn = NearestNeighbor()
-nn.train(X_train, y_train)
-y_pred = nn.predict(X_test[:100])
-
-accuracy = np.mean(y_test[:100] == y_pred)
-print(accuracy)"""
 
 knn = KNeighborsClassifier(n_neighbors = 5, p = 1, n_jobs = -1)
 knn.fit(X_train, y_train)
