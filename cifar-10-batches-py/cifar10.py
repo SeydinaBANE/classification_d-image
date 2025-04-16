@@ -8,15 +8,7 @@ import time
 from sklearn.model_selection import KFold, GridSearchCV, RandomizedSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 
-def print_same_line(string):
-	sys.stdout.write('\r' + string)
-	sys.stdout.flush()
 
-
-"""
-CIFAR-10 Dataset: "Learning Multiple Layers of Features from Tiny Images" 
-Alex Krizhevsky, 2009.
-"""
 class CIFAR10:
 	def __init__(self, data_path):
 		"""Extrait les données CIFAR10 depuis data_path"""
